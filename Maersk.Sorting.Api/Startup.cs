@@ -22,6 +22,8 @@ namespace Maersk.Sorting.Api
                 .AddControllers()
                 .AddNewtonsoftJson(options => options.SerializerSettings.Converters.Add(new StringEnumConverter()));
 
+           // services.AddCustomSwagger();
+
             services.AddSingleton<ISortJobProcessor, SortJobProcessor>();
         }
 
@@ -31,6 +33,7 @@ namespace Maersk.Sorting.Api
             {
                 app.UseDeveloperExceptionPage();
             }
+          //  app.UseCustomSwagger();
 
             app.UseRouting();
             app.UseEndpoints(endpoints =>

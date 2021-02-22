@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OfficeOpenXml.FormulaParsing.Excel.Functions.Text;
+using System;
 using System.Collections.Generic;
 
 namespace Maersk.Sorting.Api
@@ -19,5 +20,7 @@ namespace Maersk.Sorting.Api
         public TimeSpan? Duration { get; }
         public IReadOnlyCollection<int> Input { get; }
         public IReadOnlyCollection<int>? Output { get; }
+
+        
     }
 }
